@@ -2,6 +2,22 @@
 
 Guess It India is a small, anonymous 20 Questions game about Indian monuments, famous Indians, sportspersons, and numbers. It is a vanilla HTML/CSS/JavaScript frontend served by the same Cloudflare Worker that exposes the game API.
 
+## Screenshots
+
+The public demo was deployed to Cloudflare Workers for testing and has since been taken offline. The screenshots below show the deployed application.
+
+### Choose a category
+
+![Guess It India category selection](docs/screenshots/home.png)
+
+### Ask your way to the answer
+
+![Guess It India question ledger](docs/screenshots/in-game.png)
+
+### Reveal the answer
+
+![Guess It India finished game](docs/screenshots/gave-up.png)
+
 ## Architecture
 
 - Cloudflare Worker: routes API requests and serves the frontend through Static Assets.
