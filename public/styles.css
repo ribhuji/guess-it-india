@@ -30,6 +30,7 @@ h1 { margin: 0; font-size: clamp(2rem, 8vw, 3.25rem); }
 .categories { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); }
 button { padding: 12px 14px; border: 1px solid #ead4bd; border-radius: 12px; background: #fffaf5; color: inherit; cursor: pointer; font: inherit; }
 button:hover { border-color: #b4572d; background: #fff1e4; }
+button.selected { border-color: #b4572d; background: #b4572d; color: #fff; }
 .status { margin: 24px 0 0; color: #667085; font-size: 0.9rem; }
 .status.ready { color: #26734d; font-weight: 700; }
 
