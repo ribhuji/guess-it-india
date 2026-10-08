@@ -92,7 +92,7 @@ function pickFromList(values: readonly string[]): Secret {
 }
 
 function pickNumber(): Secret {
-  return { answer: String(randomIndex(100) + 1) };
+  return { answer: randomIndex(100) + 1 };
 }
 
 export function pickSecret(category: CategoryId): Secret {

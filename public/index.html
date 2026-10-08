@@ -3,16 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4efe6" />
     <title>Guess It India</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="card">
-      <p class="eyebrow">A guessing game about India</p>
-      <h1>Guess It India 🇮🇳</h1>
-      <p class="note">Pick a category and guess the secret in 20 questions.</p>
+    <main class="page-shell">
+      <header class="masthead">
+        <a class="wordmark" href="/" aria-label="Guess It India home">Guess It India <span aria-hidden="true">🇮🇳</span></a>
+        <p class="header-note">A small game of questions</p>
+      </header>
 
-      <div id="categories" class="categories" aria-label="Categories"></div>
+      <section id="selection-view" class="selection-view" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <h1 id="page-title">Can you find<br />the secret?</h1>
+          <p class="note">Choose a category, then narrow it down one question at a time.</p>
+        </div>
+
+        <div class="selection-controls">
+          <h2>Choose a category</h2>
+          <div id="categories" class="categories" aria-label="Categories" role="group"></div>
+          <p id="selected-category" class="selected-category" aria-live="polite" hidden></p>
+          <button id="start-game" class="primary-action" type="button" hidden>Start game <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section id="game-area" class="game-area" aria-labelledby="game-category" hidden>
+        <header class="game-header">
+          <div>
+            <h1 id="game-category">Monuments</h1>
+          </div>
+          <p class="questions-count"><strong id="questions-left">20</strong><span>questions<br />left</span></p>
+        </header>
+
+        <div id="history" class="history" aria-live="polite" aria-label="Question history"></div>
+
+        <form id="question-form" class="question-form">
+          <label class="sr-only" for="question-input">Ask a yes-or-no question</label>
+          <input id="question-input" name="question" type="text" maxlength="300" placeholder="Ask a yes-or-no question" autocomplete="off" required />
+          <button id="ask-question" class="primary-action" type="submit">Ask <span aria-hidden="true">↵</span></button>
+        </form>
+        <p id="game-message" class="game-message" role="status" aria-live="polite"></p>
+
+        <footer class="game-actions">
+          <button id="give-up" class="text-action" type="button">Give up</button>
+          <button id="new-game" class="text-action" type="button" hidden>New game</button>
+        </footer>
+        <p id="answer" class="answer" hidden></p>
+      </section>
 
       <p id="status" class="status" role="status">Checking service…</p>
     </main>

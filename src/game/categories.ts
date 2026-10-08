@@ -10,7 +10,7 @@ export const categories: readonly Category[] = [
     id: "famous-indians",
     label: "Famous Indians",
     description:
-      "Guess a well-known Indian from science, arts, cinema, history, business, literature, or public life.",
+      "Guess a well-known Indian from science, arts, cinema, literature, business, history, or public life.",
   },
   {
     id: "sportspersons",

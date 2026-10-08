@@ -3,6 +3,23 @@
   "name": "guess-it-india",
   "main": "src/index.ts",
   "compatibility_date": "2026-09-14",
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "GAME_SESSIONS",
+        "class_name": "GameSession"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["GameSession"]
+    }
+  ],
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
